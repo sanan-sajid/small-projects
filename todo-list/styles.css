@@ -1,0 +1,156 @@
+add css for completed also
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+/* Body styling */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%);
+}
+
+/* Title styling */
+h1 {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Task container styling */
+#task-container {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+/* New task input and button container */
+#new-task {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+#new-task label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+#task-name {
+  padding: 10px;
+  border: 2px solid #74ebd5;
+  border-radius: 5px;
+  width: 70%;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+#task-name:focus {
+  border-color: #9face6;
+}
+
+#submit-button {
+  background-color: #74ebd5;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#submit-button:hover {
+  background-color: #9face6;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Task item styling */
+.task {
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.task:hover {
+  transform: translateY(-5px);
+}
+
+/* Task details */
+.task h3 {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.task p {
+  color: #666;
+  margin-right: 10px;
+}
+
+.task button {
+  background-color: #74ebd5;
+  border: none;
+  padding: 5px 10px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.task button:hover {
+  background-color: #9face6;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Task completion animation */
+.completed {
+  text-decoration: line-through;
+  color: gray;
+  transition: color 0.3s ease;
+}
